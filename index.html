@@ -1,49 +1,66 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premium Chess Set</title>
   <style>
+    /* Body and background */
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      background-image: url('dark-wood.jpg'); /* dark wood texture */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #f4e1b6; /* light gold text */
     }
+
+    /* Header */
     header {
-      background: #222;
-      color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
+      background: rgba(30, 20, 20, 0.8); /* semi-transparent overlay */
     }
     header h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       margin-bottom: 10px;
+      color: #f4e1b6; /* gold */
     }
     header p {
       font-size: 1.2em;
     }
     .btn {
-      background: #d4af37; /* gold */
+      background-color: #d4af37; /* gold */
       color: black;
-      padding: 12px 25px;
+      padding: 15px 30px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
       display: inline-block;
       margin-top: 20px;
+      transition: 0.3s;
     }
+    .btn:hover {
+      background-color: #bfa137;
+      transform: scale(1.05);
+    }
+
+    /* Sections */
     .section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
-    }
-    .section img {
-      max-width: 100%;
-      height: auto;
+      background-color: rgba(30, 20, 20, 0.85); /* semi-transparent dark brown */
+      margin: 20px auto;
       border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      max-width: 1000px;
+    }
+    .section h2 {
+      color: #f4e1b6;
+      border-bottom: 2px solid #d4af37;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
     }
     .image-grid {
       display: flex;
@@ -55,8 +72,10 @@
     .image-grid img {
       width: 45%;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     }
+
+    /* Form */
     form {
       max-width: 400px;
       margin: auto;
@@ -64,22 +83,34 @@
     }
     form input, form textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
-      border: 1px solid #ccc;
+      border: 1px solid #d4af37;
       border-radius: 5px;
+      background: #3e2f2f;
+      color: #f4e1b6;
+    }
+    form input::placeholder, form textarea::placeholder {
+      color: #f4e1b6aa;
     }
     form button {
       background: #d4af37;
       color: black;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
+      transition: 0.3s;
     }
+    form button:hover {
+      background-color: #bfa137;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
     footer {
-      background: #111;
+      background: rgba(30, 20, 20, 0.9);
       color: #aaa;
       text-align: center;
       padding: 20px;
@@ -113,8 +144,8 @@
   </div>
 
   <div class="section" id="contact">
-    <h2>Join Our Chess Club / Order by Email</h2>
-    <form action="https://formspree.io/f/xdklwrde" method="POST">
+    <h2>Order by Email</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <label for="name">Name</label>
       <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
@@ -133,5 +164,6 @@
   </footer>
 </body>
 </html>
+
 
 
