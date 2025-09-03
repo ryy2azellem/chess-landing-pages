@@ -27,12 +27,13 @@
       font-size: 3em;
       margin-bottom: 10px;
       color: #f4e1b6;
+      text-shadow: 0 0 10px #d4af37;
     }
+
     header p {
       font-size: 1.2em;
     }
 
-    /* Buttons inside header */
     .btn-container {
       display: flex;
       justify-content: center;
@@ -45,10 +46,7 @@
     }
 
     @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .btn {
@@ -60,13 +58,14 @@
       border-radius: 5px;
       display: inline-block;
       transition: 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(212,175,55,0.6);
+      text-shadow: 0 0 5px #fff;
     }
 
     .btn:hover {
       transform: translateY(-3px) scale(1.05);
       background-color: #bfa137;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      box-shadow: 0 8px 25px rgba(212,175,55,0.😎, 0 0 10px #ffd700;
     }
 
     .section {
@@ -84,6 +83,7 @@
       display: inline-block;
       padding-bottom: 5px;
       margin-bottom: 20px;
+      text-shadow: 0 0 5px #d4af37;
     }
 
     .image-grid {
@@ -98,6 +98,18 @@
       width: 45%;
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .lead-magnet {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #f4e1b6;
+      text-shadow: 0 0 8px #ffd700;
+    }
+
+    .lead-magnet strong {
+      color: #d4af37;
+      text-shadow: 0 0 10px #ffd700;
     }
 
     form {
@@ -129,12 +141,14 @@
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(212,175,55,0.6);
+      text-shadow: 0 0 5px #fff;
     }
 
     form button:hover {
       background-color: #bfa137;
       transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 25px rgba(212,175,55,0.😎, 0 0 10px #ffd700;
     }
 
     footer {
@@ -151,10 +165,8 @@
     <h1>Premium Chess Set</h1>
     <p>Luxury handcrafted chess pieces for champions</p>
 
-    <!-- Buttons back inside header -->
     <div class="btn-container">
       <a href="https://wa.me/639634483871?text=Hello!%20I%20want%20to%20order%20a%20Premium%20Chess%20Set." target="_blank" class="btn">Order via WhatsApp</a>
-      <a href="#chess-club" class="btn">Join Chess Club</a>
     </div>
   </header>
 
@@ -175,17 +187,20 @@
        ✔️ Elegant packaging — ideal for gifts</p>
   </div>
 
-  <div class="section" id="chess-club">
-    <h2>Join Our Chess Club</h2>
-    <p>Sign up with your email to receive updates, tips, and exclusive offers from our premium chess club.</p>
-    <form action="https://formspree.io/f/xkgvqdop" method="POST">
+  <!-- Lead Magnet Section -->
+  <div class="section" id="lead-magnet">
+    <h2>Get Your Free Chess Strategy Guide</h2>
+    <p class="lead-magnet">Sign up now and receive a <strong>FREE PDF guide</strong> with tips to improve your chess game instantly!</p>
+    <form action="YOUR_FORM_URL" method="POST">
+      <input type="hidden" name="_redirect" value="thankyou.html">
+
       <label for="name">Name</label>
       <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
       <label for="email">Email</label>
       <input type="email" name="_replyto" id="email" placeholder="Enter your email" required>
 
-      <button type="submit">Join Now</button>
+      <button type="submit">Get My Free Guide</button>
     </form>
   </div>
 
